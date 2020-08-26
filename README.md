@@ -46,19 +46,21 @@ Things you may want to cover:
 - has_one :Purchase_destination
 - belongs_to : Purchase_id
 
-## Purchase_destination テーブル
+## purchase_destination テーブル
 
 | Column          | Type    | Options                         |
 | --------------- | ------  | ------------------------------- |
 | postal_code     | string  | null: false                     |
-| prefecture      | integer | null: false, foreign_key: true  |
+| prefecture      | integer | null: false                     |
 | city            | string  | null: false                     |
 | house_number    | string  | null: false                     |
 | building_name   | string  |                                 |
-| phone_number    | string  | unique:true                     |
+| phone_number    | string  | null: false                     |
+| purchase_id     | integer | null: false, foreign_key:true   |
+
 
 ### Association
-
+belongs_to : purchase_id
 
 
 
@@ -67,24 +69,24 @@ Things you may want to cover:
 
 | Column               | Type       | Options                        |
 | -------------------- | ---------- | ------------------------------ |
-| Product_name         | string     | null: false                    |
+| product_name         | string     | null: false                    |
 | price                | integer    | null: false                    |
-| Product_description  | integer    | null: false                    |
+| product_description  | integer    | null: false                    |
 | user_id              | integer    | null: false, foreign_key: true |
 | category             | integer    | null: false                    |
-| Product_status       | integer    | null: false, foreign_key: true |
-| Delivery_fee         | integer    | null: false, foreign_key: true |
-| Shipping_area        | integer    | null: false, foreign_key: true |
-| Shipping_data        | integer    | null: false, foreign_key: true |
+| product_status       | integer    | null: false,                   |
+| delivery_fee         | integer    | null: false,                   |
+| shipping_area        | integer    | null: false,                   |
+| shipping_data        | integer    | null: false,                   |
 
 
 ### Association
 
 - belongs_to : users
-- belongs_to : Purchase_id
+- belongs_to : purchase_id
 
 
-## Purchase_id テーブル
+## purchase_id テーブル
 
 | Column         | Type    | Options                        |
 | -------------- | ------- | ------------------------------ |
