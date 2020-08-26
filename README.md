@@ -98,3 +98,4 @@ belongs_to : purchase_id
 
 - belongs_to : items
 - belongs_to : users
+- has_one : purchase_destination
