@@ -44,21 +44,22 @@ Things you may want to cover:
 
 - has_many :items
 - has_one :Purchase_destination
+- belongs_to : Purchase_id
 
 ## Purchase_destination テーブル
 
 | Column          | Type    | Options                         |
 | --------------- | ------  | ------------------------------- |
-| postal_code     | integer | null: false                     |
-| prefecture      | integer | null: false, foreign_key: true |
+| postal_code     | string  | null: false                     |
+| prefecture      | integer | null: false, foreign_key: true  |
 | city            | string  | null: false                     |
 | house_number    | string  | null: false                     |
 | building_name   | string  |                                 |
-| phone_number    | integer | unique:true                     |
+| phone_number    | string  | unique:true                     |
 
 ### Association
 
-- belongs_to :users
+
 
 
 
@@ -67,10 +68,9 @@ Things you may want to cover:
 | Column               | Type       | Options                        |
 | -------------------- | ---------- | ------------------------------ |
 | Product_name         | string     | null: false                    |
-| item_img             | references | null: false, foreign_key: true |
 | price                | integer    | null: false                    |
-| Product_description  | string     | null: false                    |
-| user_id              | string     | null: false, foreign_key: true |
+| Product_description  | integer    | null: false                    |
+| user_id              | integer    | null: false, foreign_key: true |
 | category             | integer    | null: false                    |
 | Product_status       | integer    | null: false, foreign_key: true |
 | Delivery_fee         | integer    | null: false, foreign_key: true |
@@ -81,7 +81,7 @@ Things you may want to cover:
 ### Association
 
 - belongs_to : users
-
+- belongs_to : Purchase_id
 
 
 ## Purchase_id テーブル
@@ -95,4 +95,4 @@ Things you may want to cover:
 ### Association
 
 - belongs_to : items
-- has_many : users
+- belongs_to : users
