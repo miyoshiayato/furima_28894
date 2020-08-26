@@ -44,7 +44,7 @@ Things you may want to cover:
 
 - has_many :items
 - has_one :Purchase_destination
-- belongs_to : Purchase_id
+- has_many : Purchase
 
 ## purchase_destination テーブル
 
@@ -60,7 +60,7 @@ Things you may want to cover:
 
 
 ### Association
-belongs_to : purchase_id
+belongs_to : purchase
 
 
 
@@ -83,10 +83,10 @@ belongs_to : purchase_id
 ### Association
 
 - belongs_to : user
-- belongs_to : purchase_id
+- has_one : purchase
 
 
-## purchase_id テーブル
+## purchase テーブル
 
 | Column         | Type    | Options                        |
 | -------------- | ------- | ------------------------------ |
@@ -98,4 +98,3 @@ belongs_to : purchase_id
 
 - belongs_to : item
 - belongs_to : user
-- has_one : purchase_destination
