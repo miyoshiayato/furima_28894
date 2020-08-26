@@ -82,7 +82,7 @@ belongs_to : purchase_id
 
 ### Association
 
-- belongs_to : users
+- belongs_to : user
 - belongs_to : purchase_id
 
 
@@ -96,6 +96,6 @@ belongs_to : purchase_id
 
 ### Association
 
-- belongs_to : items
-- belongs_to : users
+- belongs_to : item
+- belongs_to : user
 - has_one : purchase_destination
