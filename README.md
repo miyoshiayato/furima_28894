@@ -42,9 +42,8 @@ Things you may want to cover:
 
 ### Association
 
-- has_many :items
-- has_one :Purchase_destination
-- has_many : Purchase
+- has_many : items
+- has_many : purchases
 
 ## purchase_destination テーブル
 
@@ -98,3 +97,4 @@ belongs_to : purchase
 
 - belongs_to : item
 - belongs_to : user
+- has_one : purchase_destination
