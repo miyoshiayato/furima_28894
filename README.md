@@ -50,7 +50,7 @@ Things you may want to cover:
 | Column          | Type    | Options                         |
 | --------------- | ------  | ------------------------------- |
 | postal_code     | string  | null: false                     |
-| prefecture      | integer | null: false                     |
+| Prefecture      | integer | null: false                     |
 | city            | string  | null: false                     |
 | house_number    | string  | null: false                     |
 | building_name   | string  |                                 |
@@ -72,11 +72,11 @@ belongs_to : purchase
 | price                | integer    | null: false                    |
 | product_description  | integer    | null: false                    |
 | user_id              | integer    | null: false, foreign_key: true |
-| category             | integer    | null: false                    |
-| product_status       | integer    | null: false,                   |
-| delivery_fee         | integer    | null: false,                   |
-| shipping_area        | integer    | null: false,                   |
-| shipping_data        | integer    | null: false,                   |
+| Category             | integer    | null: false                    |
+| ProductStatus        | integer    | null: false,                   |
+| DeliveryFee          | integer    | null: false,                   |
+| ShippingArea         | integer    | null: false,                   |
+| ShippingData         | integer    | null: false,                   |
 
 
 ### Association
