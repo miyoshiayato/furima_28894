@@ -56,32 +56,32 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include("Price must be less than 10000000")
       end
 
-      it 'カテゴリーが空では登録できない' do
-        @item.category_id = nil
+      it 'カテゴリーが未選択では登録できない' do
+        @item.category_id = ' '
         @item.valid?
         expect(@item.errors.full_messages).to include("Category can't be blank")
       end
 
-      it '商品の状態が空では登録できない' do
-        @item.product_status_id = nil
+      it '商品の状態が未選択では登録できない' do
+        @item.product_status_id = ' '
         @item.valid?
         expect(@item.errors.full_messages).to include("Product status can't be blank")
       end
 
-      it '配送料の負担が空では登録できない' do
-        @item.delivery_fee_id = nil
+      it '配送料の負担が未選択では登録できない' do
+        @item.delivery_fee_id = ' '
         @item.valid?
         expect(@item.errors.full_messages).to include("Delivery fee can't be blank")
       end
 
-      it '発送元の地域が空では登録できない' do
-        @item.shipping_area_id = nil
+      it '発送元の地域が未選択では登録できない' do
+        @item.shipping_area_id = ' '
         @item.valid?
         expect(@item.errors.full_messages).to include("Shipping area can't be blank")
       end
 
-      it '発送までの日数が空では登録できない' do
-        @item.shipping_data_id = nil
+      it '発送までの日数が未選択では登録できない' do
+        @item.shipping_data_id = ' '
         @item.valid?
         expect(@item.errors.full_messages).to include("Shipping data can't be blank")
       end
