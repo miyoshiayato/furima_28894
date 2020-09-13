@@ -39,7 +39,7 @@ RSpec.describe Item, type: :model do
       end
 
       it 'カテゴリーが空では登録できない' do
-        @item.category_id  = nil
+        @item.category_id = nil
         @item.valid?
         expect(@item.errors.full_messages).to include("Category can't be blank")
       end
@@ -55,7 +55,7 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Delivery fee can't be blank")
       end
-      
+
       it '発送元の地域が空では登録できない' do
         @item.shipping_area_id = nil
         @item.valid?
@@ -70,4 +70,3 @@ RSpec.describe Item, type: :model do
     end
   end
 end
-
