@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
   private
   
   def item_params
-    params.require(:item).permit(:product_name, :price, :product_description, :Category_id, :ProductStatus_id, :DeliveryFee_id, :ShippingArea_id, :ShippingData_id).merge(user_id: current_user.id)
+    params.require(:item).permit(:image, :product_name, :price, :product_description, :category_id, :product_status_id, :delivery_fee_id, :shipping_area_id, :shipping_data_id).merge(user_id: current_user.id)
   end
   
   def not_sign_in
