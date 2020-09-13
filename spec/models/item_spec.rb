@@ -38,6 +38,24 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include("Price can't be blank")
       end
 
+      it '販売価格が全角では登録できない' do
+        @item.price = 'あ００あ'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Price is not a number")
+      end
+
+      it '販売価格が¥300未満だと登録できない' do
+        @item.price = '299'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Price must be greater than 300")
+      end
+
+      it '販売価格が¥10000000だと登録できない' do
+        @item.price = '10000000'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Price must be less than 10000000")
+      end
+
       it 'カテゴリーが空では登録できない' do
         @item.category_id = nil
         @item.valid?
