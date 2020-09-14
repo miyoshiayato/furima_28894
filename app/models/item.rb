@@ -14,10 +14,10 @@ class Item < ApplicationRecord
     validates :product_name, length: { maximum: 40 }
     validates :price, length: { minimum: 3, maximum: 7 }, numericality: { only_integer: true, greater_than: 300, less_than: 10_000_000 }
     validates :product_description, length: { maximum: 40 }
-    validates :category_id, numericality: { other_than: 0, message: 'select' } 
-    validates :product_status_id, numericality: { other_than: 0,message: 'select' } 
-    validates :delivery_fee_id, numericality: { other_than: 0, message: 'select' } 
-    validates :shipping_area_id, numericality: { other_than: 0, message: 'select' } 
-    validates :shipping_data_id, numericality: { other_than: 0, message: 'select' } 
+    validates :category_id, numericality: { other_than: 0, message: "can't be blank" } 
+    validates :product_status_id, numericality: { other_than: 0,message: "can't be blank" } 
+    validates :delivery_fee_id, numericality: { other_than: 0, message: "can't be blank" } 
+    validates :shipping_area_id, numericality: { other_than: 0, message: "can't be blank" } 
+    validates :shipping_data_id, numericality: { other_than: 0, message: "can't be blank" } 
   end
 end

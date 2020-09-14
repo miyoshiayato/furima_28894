@@ -57,31 +57,31 @@ RSpec.describe Item, type: :model do
       end
 
       it 'カテゴリーが未選択では登録できない' do
-        @item.category_id = ' '
+        @item.category_id = '0'
         @item.valid?
         expect(@item.errors.full_messages).to include("Category can't be blank")
       end
 
       it '商品の状態が未選択では登録できない' do
-        @item.product_status_id = ' '
+        @item.product_status_id = '0'
         @item.valid?
         expect(@item.errors.full_messages).to include("Product status can't be blank")
       end
 
       it '配送料の負担が未選択では登録できない' do
-        @item.delivery_fee_id = ' '
+        @item.delivery_fee_id = '0'
         @item.valid?
         expect(@item.errors.full_messages).to include("Delivery fee can't be blank")
       end
 
       it '発送元の地域が未選択では登録できない' do
-        @item.shipping_area_id = ' '
+        @item.shipping_area_id = '0'
         @item.valid?
         expect(@item.errors.full_messages).to include("Shipping area can't be blank")
       end
 
-      it '発送までの日数が未選択では登録できない' do
-        @item.shipping_data_id = ' '
+      it '発送日数が未選択では登録できない' do
+        @item.shipping_data_id = '0'
         @item.valid?
         expect(@item.errors.full_messages).to include("Shipping data can't be blank")
       end
