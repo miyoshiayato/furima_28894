@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   before_action :not_sign_in, except: [:index]
   def index
+    @item = Item.all
   end
 
   def new
