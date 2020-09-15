@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :not_sign_in, except: [:index]
+  before_action :not_sign_in, except: [:index, :show]
   def index
     @items = Item.order("created_at DESC")
   end
@@ -21,6 +21,9 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
   end
+
+
+
 
   private
 
