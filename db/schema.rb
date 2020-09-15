@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_09_09_065212) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "product_name"
     t.integer "price"
-    t.integer "product_description"
+    t.text "product_description"
     t.integer "category_id"
     t.integer "product_status_id"
     t.integer "delivery_fee_id"
