@@ -45,7 +45,7 @@ Things you may want to cover:
 - has_many : items
 - has_many : purchases
 
-## purchase_destination テーブル
+## Address テーブル
 
 | Column          | Type    | Options                         |
 | --------------- | ------  | ------------------------------- |
@@ -97,4 +97,4 @@ belongs_to : purchase
 
 - belongs_to : item
 - belongs_to : user
-- has_one : purchase_destination
+- has_one : order
