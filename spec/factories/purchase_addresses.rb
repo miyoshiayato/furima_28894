@@ -9,4 +9,3 @@ FactoryBot.define do
     token         { 'abc' }
   end
 end
-
